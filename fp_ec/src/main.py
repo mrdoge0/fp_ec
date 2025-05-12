@@ -17,6 +17,16 @@ import shutil
 import subprocess
 import random
 
+# Import AI libs.
+try:
+    import cv2
+    import numpy as np
+    import mediapipe as mp
+    from sklearn.cluster import KMeans
+except:
+    print("Couldn't import required AI libraries (Are dependencies installed?)")
+    exit(2)
+
 # Declare version.
 def Version():
     try:
@@ -41,6 +51,9 @@ try:
         is_verbose = False
 except:
     is_verbose = False
+
+# Declare eye color function.
+
 
 # Exit successfully if nothing is active.
 exit(0)
